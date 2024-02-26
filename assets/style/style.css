@@ -1,0 +1,136 @@
+.flux {
+ margin-left: 20px;
+ margin-right: 20px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Lora", serif;
+    ;
+   
+}
+    
+    
+    /*css header*/
+
+
+.navcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#05263B;
+    border-bottom: solid 1px color(srgb rgb(116, 34, 34) green rgb(69, 69, 90));
+    
+}
+
+.navcontainer ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    text-transform: capitalize;
+    width: 70%; 
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 14px;
+    
+}
+.navcontainer img{
+ display: flex;
+ align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    color:#f35b04 ;
+
+}
+/*fin css header*/
+
+/*css body*/
+
+.conteneurSection2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+h2 {
+    text-transform: capitalize;
+    font-size: ;
+    font-weight: bold;
+ }
+ h1 {
+    text-transform: capitalize;
+
+ }
+
+
+
+/*css footer*/
+
+.connecterFooter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: darkcyan;
+    border: 1px solide darkcyan;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.connecterFooter1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+
+}
+label {
+
+   text-transform: capitalize;
+   font-weight: bolder;
+}
+
+
+/*fin css footer*/
+
+/*media queries header*/
+
+@media screen and (min-width:680px) and (max-width:1024px){
+    .navcontainer ul{
+        font-size: 18px;
+        width: 60%;
+
+    }
+    .connecterFooter{
+        flex-direction:row;
+        text-align: center;
+        justify-content: space-around;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+    .navcontainer ul{
+        font-size: 20px;
+
+        width: 50%;
+     }
+     .connecterFooter{
+        flex-direction:row;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+
+}
+/*fin css media queries*/
+/*debut css section2*/
+.contenersection1{
+    margin-bottom: 20px;
+}
