@@ -84,4 +84,43 @@ INSERT INTO `voiture` (`id`, `category_id`, `title`, `description`, `price`, `ki
 
 
 
--
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `service`
+--
+
+
+--
+-- Déchargement des données de la table `service`
+--
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `horaire d'ouverture`
+--
+DROP TABLE IF EXISTS `horaire d'ouverture`;
+CREATE TABLE IF NOT EXISTS `horaire d'ouverture` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `jour` varchar(255) NOT NULL,
+  `horaire matin` varchar(255) NOT NULL,
+  `horaire apres midi` varchar(255) NOT NULL,
+  `état` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+
+--
+-- Déchargement des données de la table `horaire d'ouverture`
+--
+INSERT INTO `horaire d'ouverture` (`id`, `jour`,`horaire matin`,`horaire apres midi`, `état`) VALUES
+(1, 'lundi','essence','essence'),
+(2, 'mardi','essence','essence'),
+(3, 'mercredi','essence','essence');
+(4, 'jeudi','essence','essence'),
+(5, 'vendredi','essence','essence'),
+(6, 'samedi','essence','essence');
+(7, 'dimanche','essence','essence'),

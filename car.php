@@ -3,7 +3,7 @@
   define('_CARS_IMG_PATH','upload/voitureOccation/');
 ?>
 <?php 
-include_once('templets/header.php');
+include_once('templets/header.php'); // inclure le header
 include_once('app/tools/carfunc.php');
 ?>
   <main>

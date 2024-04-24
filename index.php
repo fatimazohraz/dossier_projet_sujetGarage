@@ -6,7 +6,7 @@
 <!--header-->
 <?php
 include_once('templets/header.php');
-include_once('app/tools/carfunc.php');
+include_once('app/tools/carfunc.php'); // fonction d'importation d'image de la bdd
 
 ?>
 <!--fin header -->
