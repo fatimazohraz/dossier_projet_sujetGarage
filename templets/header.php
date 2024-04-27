@@ -1,3 +1,11 @@
+<?php
+include_once('app/tools/pdo.php');
+
+
+?>
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">

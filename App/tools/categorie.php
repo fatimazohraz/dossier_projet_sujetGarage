@@ -7,5 +7,5 @@ function getcategories(PDO $pdo) {
 
     $query->execute();
     return $query->fetchAll();
-
+      
 }

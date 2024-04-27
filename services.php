@@ -5,9 +5,10 @@ include_once('templets/header.php')
 ?>
 
 <main>
+  <h1 class="text-uppercase bg-dark text-center mt-2">nos service</h1>
     <div class="mx-4 my-5">
        <div class="container ">
-         <h2 class="text-center" >Entretien et réparation</h2>
+         <h2 class="text-center bg-info bg-gradient py-2" >Entretien et réparation</h2>
         <div class="container">
         <div class="row  align-items-center g-5 py-5">
           <div class="col-lg-6" width='50%' >
@@ -79,14 +80,13 @@ include_once('templets/header.php')
             Prenez rendez-vous dès aujourd'hui pour passer votre voiture au contrôle technique en toute 
             tranquillité.
             </p>
-            <h3 class="text-center">pour toute question contacter nous <a href="">ici.</a></h3>
       </div>
     </div>
 
 
 <div class="mx-4 my-5">
     <div class="container ">
-         <h1 class="text-center" >réparation carroserier</h1>
+         <h2 class="text-center bg-info bg-gradient py-2" >réparation carroserier</h2>
         <div class="container">
         <div class="row  align-items-center g-5 py-5">
           <div class="col-lg-6">
@@ -102,9 +102,9 @@ include_once('templets/header.php')
     </div>    
 </div>
 
-<div class="mx-4 my-5">
+<div class="mx-4 my-4">
     <div class="container ">
-         <h1 class="text-center" >nétoyage voiture</h1>
+         <h2 class="text-center  bg-info bg-gradient py-2" >nétoyage voiture</h2>
         <div class="container">
         <div class="row  align-items-center g-5 py-5">
           <div class="col-lg-6">
@@ -127,6 +127,8 @@ include_once('templets/header.php')
         </div>    
     </div>
 </div>
+  
+<h3 class="text-center mb-3">pour toute question contacter nous <a href="">ici.</a></h3>
 
 </main>
 

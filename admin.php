@@ -1,4 +1,4 @@
-<!--constance carsCard -->
+
 <?php
   define('_CARS_IMG_PATH','upload/voitureoccation/');
 ?>
@@ -7,25 +7,40 @@
 <?php
 
 include_once('templets/header.php');
-include_once('app/tools/carfunc.php'); // fonction d'importation d'image de la bdd
 require_once('app/tools/categorie.php'); //fonction iportation des catégories
+include_once('app/tools/carfunc.php'); // fonction d'importation d'image de la bdd
 require_once('app/tools/fonctionOutille.php');
-require_once('app/tools/pdo.php');
 
 ?>
 <!--fin header -->
+<!-------------------------------------------------------------------------------------->
+
 <main>
 
 <?php
+//initialisation des variables
 $errors = [];
 $messages = [];
 
+$car = [
+  'title' => '',
+  'description' => '',
+  'price' => '',
+  'kilometers' => '',
+  'year' => '',
+  'category_id' => '',
 
-$categories = getcategories($pdo); //fonction d'importation des categorie de voiture
+];
+//----------------------------------
+
+//fonction d'importation des categorie de voiture
+$categories = getcategories($pdo); 
 
 
 
-if (isset($_POST['savecar'])) {
+//on teste si le formulaire a été envoyé avvec la methode isset
+
+if (isset($_POST['savecar'])) { 
   $fileName = null;
 
   if(isset($_FILES['file']['tmp_name']) && $_FILES['file']['tmp_name'] != '') {  // isset() détermine si une variable existe(verifie si le fichier existe)
@@ -41,7 +56,7 @@ if (isset($_POST['savecar'])) {
     }
   }
 
-  if (!$errors) {
+  if (!$errors) { //pour ne pas sauvgardé en cas d'érreur
     $Ncars = saveCar($pdo, $_POST['category'], $_POST['title'], $_POST['description'], $_POST['price'], $_POST['kilometers'], $_POST['year'], $fileName);
     
     if ($Ncars) {
@@ -51,14 +66,21 @@ if (isset($_POST['savecar'])) {
     }
 }
 
-}
- 
-
-
+$car = [
   
+  'title' =>  $_POST['title'],
+  'description' =>  $_POST['description'],
+  'price' => $_POST['price'],
+  'kilometers' => $_POST['kilometers'],
+  'year' => $_POST['year'],
+  'category_id' => $_POST['category'],
 
+];
+
+}
 
 ?>
+<!-- fin di teste--------------------->
 
 <h1>ajouter une voiture</h1>
 
@@ -121,21 +143,6 @@ if (isset($_POST['savecar'])) {
 
 </form>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </main>
 
 <?php
@@ -143,17 +150,6 @@ include_once('templets/footer.php');
 
 ?>
 
-
-
-
-
-
-
-
 <!--footer -->
 
-<?php
-include_once('templets/footer.php');
 
-?>
-<!--fin footer-->
