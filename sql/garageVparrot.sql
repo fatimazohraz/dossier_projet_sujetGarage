@@ -116,11 +116,22 @@ CREATE TABLE IF NOT EXISTS `horaire d'ouverture` (
 --
 -- Déchargement des données de la table `horaire d'ouverture`
 --
-INSERT INTO `horaire d'ouverture` (`id`, `jour`,`horaire matin`,`horaire apres midi`, `état`) VALUES
-(1, 'lundi','essence','essence'),
-(2, 'mardi','essence','essence'),
-(3, 'mercredi','essence','essence');
-(4, 'jeudi','essence','essence'),
-(5, 'vendredi','essence','essence'),
-(6, 'samedi','essence','essence');
-(7, 'dimanche','essence','essence'),
+INSERT INTO `horaire d'ouverture` (`id`, `jour`,`horaire`,`état`) VALUES
+(1, 'lundi','08:30 - 19:30','ouvert'),
+(2, 'mardi','08:30 - 19:30','ouvert'),
+(3, 'mercredi','08:30 - 19:30','ouvert');
+(4, 'jeudi','08:30 - 19:30','ouvert'),
+(5, 'vendredi','08:30 - 19:30','ouvert'),
+(6, 'samedi','08:30 - 19:30','ouvert');
+(7, 'dimanche',' - ','fermé'),
+
+
+----------------------------------------------------------------------
+--
+--structure de la table service
+--
+
+
+
+--
+--déchargement des donées de la table service

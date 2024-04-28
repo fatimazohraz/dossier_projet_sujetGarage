@@ -1,10 +1,8 @@
 <?php
 include_once('app/tools/pdo.php');
-
+include_once('app/tools/session.php')
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -10,6 +10,27 @@ include_once('app/tools/user.php');
 
 ?>
 
+<?php
+
+  $message=[];
+  $errors=[];
+
+ if (isset($_POST['addUser'])) {
+
+    $newuser = addUser($pdo, $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password']);
+
+    if ($newuser) {
+        $messages[] = 'Merci pour votre inscription';
+    } else {
+        $errors[] = 'Une erreur s\'est produite lors de votre inscription';
+    }
+
+  }
+
+?>
+
+
+?>
 <!--debut formulaire de connection-->
 <section>
       <div class="container my-5 pt-5">
