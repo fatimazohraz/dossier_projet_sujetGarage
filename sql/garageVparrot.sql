@@ -130,8 +130,44 @@ INSERT INTO `horaire d'ouverture` (`id`, `jour`,`horaire`,`état`) VALUES
 --
 --structure de la table service
 --
-
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 
 --
 --déchargement des donées de la table service
+--
+--
+INSERT INTO `services` (`id`, `titre`,`description`,`image`) VALUES
+(1, 'Entretien Et Réparation','   ','image'),
+(2, 'Réparation Carroserier','   ','image'),
+(3, 'Nétoyage Voiture','  ','image');
+
+
+----------------------------------------------------------------------
+--
+--structure de la table Avis
+--
+DROP TABLE IF EXISTS `avis`;
+CREATE TABLE IF NOT EXISTS `avis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`),
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+
+
+--
+--déchargement des donées de la table avis
+--
+--
+INSERT INTO `services` (`id`, `nom`,`message`) VALUES
+(1, 'null','null'),
+(2, 'null',' null'),
+(3, 'null','null');

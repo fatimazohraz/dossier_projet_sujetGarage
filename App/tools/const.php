@@ -1,3 +1,3 @@
-<?php
 
-define('_voiture_IMG_PATH_', 'upload/voitureOccation');
+<?php
+  define('_CARS_IMG_PATH','upload/voitureOccation/');

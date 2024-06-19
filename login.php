@@ -18,7 +18,7 @@ $messages = [];
 
   if (isset($_POST['loginUser'])) {
 
-    $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
+    $user = verifyLoginPassword($pdo, $_POST['email'], $_POST['password']);
 
     if ($user) {
         $_SESSION['user'] = ['email' => $user['email']];

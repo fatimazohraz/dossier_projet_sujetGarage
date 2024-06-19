@@ -93,7 +93,7 @@ include_once('app/tools/carfunc.php'); // fonction d'importation d'image de la b
 <div class="my-4">
 
     <?php
-    $pdo = new PDO('mysql:dbname=garagevparrot;host=localhost;charset=utf8mb4', 'root', '');
+   // $pdo = new PDO('mysql:dbname=garagevparrot;host=localhost;charset=utf8mb4', 'root', '');
     $cars = getcars($pdo, 3);
 
     ?>

@@ -20,7 +20,7 @@ CRUD mis en place
 - php8.2. 
 - mysql.   
 - lucidchart (pour les maquette).
-- le site est repansive, devlopé en mobile first.
+- le site est respansive, devlopé en mobile first.
 
 ## instalation
 

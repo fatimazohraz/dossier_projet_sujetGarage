@@ -1,4 +1,3 @@
-
 <?php
   define('_CARS_IMG_PATH','upload/voitureoccation/');
 ?>
@@ -38,18 +37,20 @@ $categories = getcategories($pdo);
 
 
 
-//on teste si le formulaire a été envoyé avvec la methode isset
+//on teste si le formulaire a été envoyé avec la methode isset
 
 if (isset($_POST['savecar'])) { 
   $fileName = null;
 
   if(isset($_FILES['file']['tmp_name']) && $_FILES['file']['tmp_name'] != '') {  // isset() détermine si une variable existe(verifie si le fichier existe)
-    // la méthode getimagessize va retourner false si le fichier n'est pas une image
+    // la méthode getimagessize va retourner false si le fichier n'est pas une image(je verifie si le fichier est bien une image)
     $checkImage = getimagesize($_FILES['file']['tmp_name']);  //getimagesize() détermine la taille de toute image supportée 
     if ($checkImage !== false) {
         // Si c'est une image on traite
+        //la fonction uniqid() genére un idetifiant unique qu'on va concatainer avec le file name pour eviter d'écraser l'image uplodé.
         $fileName = uniqid().'-'.slugify($_FILES['file']['name']);
         move_uploaded_file($_FILES['file']['tmp_name'], _CARS_IMG_PATH.$fileName);
+        // la fonction (move_uploaded_file) sert a deplacer un fichier d'un endroit a un autre
     } else {
         // Sinon on affiche un message d'erreur
         $errors[] = 'Le fichier n\'est pas une image';
@@ -151,5 +152,3 @@ include_once('templets/footer.php');
 ?>
 
 <!--footer -->
-
-

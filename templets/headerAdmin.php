@@ -32,9 +32,13 @@ include_once('app/tools/session.php');
         <nav class="navcontainer">
             <a href="index.php"><img src="assets/image/images.jpg" alt="logo garage"></a>
             <ul>
-                <li><a href="services.php">services</a></li>
-                <li><a href="cars.php">voitures</a></li>
-                <li><a href="formulaireConnection.php">connection</a></li>
+                <li><a href="adminCars.php">voitures</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">horaires</a></li>
+                <li><a href="">employés</a></li>
+
+
+                <li><a href="">déconnection</a></li>
 
             </ul>
 

@@ -1,4 +1,3 @@
-
 <?php
   define('_CARS_IMG_PATH','upload/voitureoccation/');
 ?>
@@ -151,5 +150,3 @@ include_once('templets/footer.php');
 ?>
 
 <!--footer -->
-
-

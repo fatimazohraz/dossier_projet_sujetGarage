@@ -8,7 +8,7 @@ include_once('app/tools/carfunc.php');
 ?>
   <main>
   <?php
-    $pdo = new PDO('mysql:dbname=garagevparrot;host=localhost;charset=utf8mb4', 'root', '');
+    //$pdo = new PDO('mysql:dbname=garagevparrot;host=localhost;charset=utf8mb4', 'root', '');
      $id=(int)$_GET['id'];
      $car = getcarById($pdo, $id);
 
