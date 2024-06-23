@@ -1,5 +1,5 @@
 <?php
-// fonction slugify 
+// fonction slugify elle remplace les caractére non compréenssible par certin navigateur par d'autre caractére(comme é les espace ...)
 function slugify($text, string $divider = '-')
 {
   // replace non letter or digits by divider

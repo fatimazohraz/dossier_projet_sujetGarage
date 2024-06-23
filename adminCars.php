@@ -5,7 +5,7 @@
 <!--header-->
 <?php
 
-include_once('templets/headeradmin.php');
+include_once('templets/header.php');
 require_once('app/tools/categorie.php'); //fonction iportation des catégories
 include_once('app/tools/carfunc.php'); // fonction d'importation d'image de la bdd
 require_once('app/tools/fonctionOutille.php');
@@ -66,7 +66,7 @@ if (isset($_POST['savecar'])) {
         $errors[] = 'La voiture n\'a pas été ajouté';
     }
 }
-
+// tableau car pour sauvgarder les information saisie sur les input dans le cas ou la saisie n'est pas sauvgardé.
 $car = [
   
   'title' =>  $_POST['title'],
@@ -83,7 +83,7 @@ $car = [
 ?>
 <!-- fin di teste--------------------->
 
-<h1>ajouter une voiture</h1>
+
 
 <?php foreach ($messages as $message) { ?> <!--message et errors sont des tableau pour gererer les message d'ereure-->
     <div class="alert alert-success">
@@ -98,6 +98,12 @@ $car = [
 <?php } ?>
 
 
+
+<main>
+
+        <div class="container rounded ">
+         <h2 class="text-center bg-info bg-gradient py-2 my-5" >ajouter une nouvelle voiture</h2>
+        <div class="container">
 <!--debut du formulaire d'ajoue-->
 
 <form method="POST" enctype="multipart/form-data">
@@ -129,6 +135,8 @@ $car = [
             <?php foreach ($categories as $category) { ?>
                 <option value="<?=$category['id']; ?>" <?php if ($car['category_id'] == $category['id']) { echo 'selected="selected"'; } ?>><?=$category['name'];?></option>
             <?php } ?>
+            <!-- la condition if est ajouté pour sauvgardé la catégorie choisie dans le cas ou le formilaire n'est pas envoié-->
+        
 
         </select>
     </div>

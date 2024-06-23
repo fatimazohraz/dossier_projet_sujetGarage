@@ -1,6 +1,6 @@
 <?php
 
-//fonction pour recuperer les categorie des voiture 
+//fonction pour recuperer les categorie des voiture (pour la page admincars.php)
 function getcategories(PDO $pdo) {
     $sql = 'SELECT * FROM categories';
     $query = $pdo->prepare($sql);
